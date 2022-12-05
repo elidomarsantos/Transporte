@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container">
+    <span id='span_h3'><h3>Editar Lista de Usuários</h3></span>
+     <br>
+
+       <form method="post">
+ 
+           <br>
+           {% csrf_token %}
+           <div class="form-row">
+           <div class="form-group col-md-3">
+               {{ form.nome|as_crispy_field }}
+           </div>    
+           <div class="form-group col-md-2">
+               {{ form.identidade|as_crispy_field }}
+           </div>    
+           <div class="form-group col-md-2">
+               {{ form.telefone|as_crispy_field }}
+           </div>   
+        
+           <div class="form-group col-md-3">
+               {{ form.valor|as_crispy_field }}
+           </div>   
+        </div>  
+        <div class="form-row">  
+           <div class="form-group col-md-7">
+               {{ form.observações|as_crispy_field }}
+           </div> 
+           <div class="form-group col-md-3">
+            {{ form.quitado|as_crispy_field }}
+        </div> 
+           
+           </div>  
+           <input type="submit" class="btn btn-success" value="Salvar">
+           <a href="/lista_usuario" class="btn btn-primary" role="button" aria-pressed="true">Voltar</a>
+    </form>
+    </div>
+
+{% endblock %}

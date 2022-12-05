@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=BIZ+UDPGothic:wght@700&family=DM+Serif+Display&family=Dancing+Script&family=Fira+Sans:wght@100&family=Gothic+A1:wght@100;200&family=Karla:wght@200&family=Libre+Baskerville&family=Paytone+One&family=Questrial&family=Staatliches&family=Water+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=BIZ+UDPGothic:wght@700&family=DM+Serif+Display&family=Dancing+Script&family=Fira+Sans:wght@100&family=Gothic+A1:wght@100;200&family=Karla:wght@200&family=Libre+Baskerville&family=Numans&family=Paytone+One&family=Questrial&family=Staatliches&family=Water+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=BIZ+UDPGothic:wght@700&family=DM+Serif+Display&family=Dancing+Script&family=Fira+Sans:wght@100&family=Gothic+A1:wght@100;200&family=Karla:wght@200&family=Libre+Baskerville&family=Numans&family=Paytone+One&family=Questrial&family=Staatliches&family=Water+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+
+
+.navbar .navbar-nav .nav-link { color:hwb(30 0% 95%); font-size:25px; font-weight: bold; text-align: center; font-family: 'Roboto Condensed', sans-serif;}
+.navbar .navbar-nav .nav-link:hover { background-color:lightgrey; color:  hsl(45, 100%, 2%);font-family: 'Roboto Condensed', sans-serif; } 
+
+
+.navbar-toggler-icon{
+  background-color:darkgrey;
+ 
+ }
+
+#nav_base {
+    background-color: lightgrey;
+    border-radius: 20px;
+   
+}
+
+#nav_base span{
+  font-size: 30px;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: red;
+  margin: auto;
+  margin-left: 3%;
+
+}
+
+#tabela_lista {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
+  text-align: center;
+
+
+}
+
+[data-md-tooltip] {
+  position: relative;
+  color: green;
+  margin-left: 5px;
+}
+
+[data-md-tooltip]:before {
+    content: attr(data-md-tooltip);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    padding: 8px;
+    transform: translateX(-50%) scale(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: top;
+    background:green;
+    color: white;
+    border-radius: 2px;
+    font-size: 15px;
+    font-family: Roboto,sans-serif;
+    font-weight: 400;
+}
+[data-md-tooltip]:hover:before {
+  transform: translateX(-50%) scale(1); 
+}
+
+h3, h4 {
+  font-size: 30px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+h4 {
+  font-size: 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+form {
+  font-size: 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+#tabela_gerais {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
+  
+}
+
+#tabela_gerais th {
+  line-height: 30px;
+  text-align: center;
+  width: 300px;
+ }
+
+#tabela_gerais td {
+  line-height: 30px;
+  text-align: center;
+  background-color: lightgray;
+ }
+
+ #modules {
+  padding: 20px;
+  background: #eee;
+  margin-bottom: 20px;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+#dropzone {
+  padding: 20px;
+  background: #eee;
+  min-height: 100px;
+  margin-bottom: 20px;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.active {
+  outline: 1px solid red;
+}
+
+.hover {
+  outline: 1px solid blue;
+}
+
+.drop-item {
+  cursor: pointer;
+  margin-bottom: 10px;
+  background-color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  border-radius: 3px;
+  border: 1px solid rgb(204, 204, 204);
+  position: relative;
+}
+
+.drop-item .remove {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}

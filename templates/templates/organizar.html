@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container">
+  <div class="card-group">
+    <div class="card">
+      
+      <div class="card-body">
+        <h5 class="card-title">Carro 01</h5>
+        <table class="table table-hover table-borderless " id='tabela_lista'>
+          <tbody>
+             <thead class="thead-light">
+              <tr>
+                <th>Nome</th>
+                <th>Poltrona</th>
+                <th>Editar Poltrona</th>
+                <th>Emitir Passagem</th>
+               </thead>
+                
+               </tr>
+               {% for a in organizar %} 
+              <tr>
+                <td>{{ a.nome|default_if_none:"&nbsp;" }}</td>
+                <td>{{ a.poltrona|default_if_none:"&nbsp;" }}</td>
+                
+                <td><a href="/editar_poltrona/{{a.id}}"><i class="material-icons" data-md-tooltip="Editar">edit</i></a></td>
+                
+                <td><a href="/deletar_fc/{{a.id}}"><i class="material-icons" style=color:blue data-md-tooltip="Passagem">note</i></a></td>
+                
+             </tr>
+             {% endfor %} 
+            </tbody>
+          </table>
+      </div>
+    </div>
+    
+  </div>
+    
+  
+
+</div>
+
+
+{% endblock %}

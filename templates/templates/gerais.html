@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="container">
+<h3 style="text-align:center;">Informações Gerais</h3>
+<br>
+<div class="row">
+<div class="col-sm-12"> 
+  <div class="card">
+         <div class="card-body"> 
+         
+            {% if gerais %}
+                <a id="registro_b" href="/deletar_gerais" class="btn btn-danger">Limpar</a>
+             {% else %}  
+               <a id="registro_b" href="/add_gerais" class="btn btn-success">Inserir</a>
+              {% endif %}  
+              {% for a in gerais %} 
+             <a id="registro_b"href="/editar_gerais/{{a.id}}" class="btn btn-warning">Editar</a>
+              {% endfor %} 
+ 
+               </div> 
+             
+         {% if messages %}
+         <ul class="messages">
+          {% for message in messages %}
+            <li {% if message.tags %}class="alert alert-{{message.tags}}"{% endif %}>{{ message }}</li>
+           {%  endfor %} 
+          </ul>
+          {% endif %}
+      </div> 
+      </div> 
+ </div>   
+  <br> 
+  <div class="row">
+ <div class="col-md-6"> 
+    <table id='tabela_gerais'>
+      <tbody>
+        <thead class="thead-light">
+           <tr>
+           <th>Congregação</th>
+           {% for a in gerais %} 
+           <td>{{ a.congregação|default_if_none:"&nbsp;" }}</td>
+           {% endfor %} 
+        </tr>  
+           <th>Cidade</th>
+           {% for a in gerais %} 
+           <td>{{ a.cidade|default_if_none:"&nbsp;" }}</td>
+           {% endfor %} 
+        </tr>
+           <tr>
+           <th>Estado</th>
+           {% for a in gerais %} 
+           <td>{{ a.estado|default_if_none:"&nbsp;" }}</td>
+           {% endfor %} 
+        </tr>
+           <tr>
+           <th>Data do Evento</th>
+           {% for a in gerais %} 
+           <td>{{ a.data_do_evento|date:'d/m/Y' }}</td>
+           {% endfor %} 
+        </tr>
+           <tr>
+           <th>Valor da Passagem</th>
+           {% for a in gerais %} 
+           <td>{{ a.valor_da_passagem|default_if_none:"&nbsp;" }}</td>
+           {% endfor %} 
+        </tr>
+           <tr>
+           <th>Quantidade de Ônibus</th>
+           {% for a in gerais %} 
+           <td>{{ a.quantidade_de_ônibus|default_if_none:"&nbsp;"  }}</td>
+           {% endfor %} 
+        </tr>
+    </thead>
+     </tbody>
+   </table>
+   
+</div>  
+</div> 
+</div> 
+</div> 
+
+
+{% endblock %}
