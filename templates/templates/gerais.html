@@ -78,6 +78,18 @@
            {% for a in gerais %} 
            <td>{{ a.quantidade_de_ônibus|default_if_none:"&nbsp;"  }}</td>
            {% endfor %} 
+           <tr>
+            <th>Coordenador</th>
+            {% for a in gerais %} 
+            <td>{{ a.coordenador|default_if_none:"&nbsp;"  }}</td>
+            {% endfor %} 
+         </tr>
+         <tr>
+            <th>Assistente</th>
+            {% for a in gerais %} 
+            <td>{{ a.assistente|default_if_none:"&nbsp;"  }}</td>
+            {% endfor %} 
+         </tr>
         </tr>
     </thead>
      </tbody>

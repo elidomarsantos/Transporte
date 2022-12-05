@@ -39,5 +39,7 @@ class Gerais(models.Model):
     data_do_evento = models.DateField(blank=True, null=True)
     valor_da_passagem = models.DecimalField(blank=True, null=True, max_digits = 10, decimal_places = 2)
     quantidade_de_ônibus = models.IntegerField(blank=True, null=True)
+    coordenador = models.CharField(max_length=60, blank=True, null=True) 
+    assistente = models.CharField(max_length=60, blank=True, null=True) 
     
     
