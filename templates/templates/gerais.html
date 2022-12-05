@@ -55,6 +55,12 @@
            <td>{{ a.estado|default_if_none:"&nbsp;" }}</td>
            {% endfor %} 
         </tr>
+        <tr>
+         <th>Evento</th>
+         {% for a in gerais %} 
+         <td>{{ a.evento|default_if_none:"&nbsp;" }}</td>
+         {% endfor %} 
+      </tr>
            <tr>
            <th>Data do Evento</th>
            {% for a in gerais %} 
