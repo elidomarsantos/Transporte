@@ -9,8 +9,7 @@ from django.contrib import messages
 from fillpdf import fillpdfs
 #import pywhatkit
 from pdf2image import convert_from_path
-import win32clipboard
-import glob, sys, fitz
+
 
 def gerais(request):
     gerais = Gerais.objects.all()
