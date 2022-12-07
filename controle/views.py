@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Usuarios, Gerais
 from django.contrib import messages
 from fillpdf import fillpdfs
-import pywhatkit
+#import pywhatkit
 from pdf2image import convert_from_path
 import win32clipboard
 import glob, sys, fitz
@@ -132,8 +132,8 @@ def recibo(request, id):
         page.save('static/recibo.png', 'PNG')
     
             
-    if request.method == 'POST':
-        pywhatkit.sendwhats_image("+55" + telefone, "static/recibo.png")
+    # if request.method == 'POST':
+    #     pywhatkit.sendwhats_image("+55" + telefone, "static/recibo.png")
         
     
     return render(request, 'templates/recibo.html', {'formgerais':formgerais ,'formusuarios': formusuarios, 'gerais': gerais, 'usuarios': usuarios, 'telefone': telefone})  
