@@ -34,3 +34,15 @@ Phone Number: +55071987495677
 Image: static/recibo.png
 Caption: 
 --------------------
+Date: 7/12/2022
+Time: 16:44
+Phone Number: +55071991172047
+Image: static/recibo.png
+Caption: 
+--------------------
+Date: 7/12/2022
+Time: 16:45
+Phone Number: +55071991172047
+Image: static/recibo.png
+Caption: 
+--------------------
