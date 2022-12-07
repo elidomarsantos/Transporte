@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+{% load static %}
+<br>
+    <div class="offset-1 col-10 list-div">
+       
+        <br>
+        
+            <a href="/lista_usuario" class="btn btn-danger" role="button" aria-pressed="true">Voltar</a>
+           
+            <td><a href="https://api.whatsapp.com/send?l=pt&amp;phone=55{{ telefone }}"><img 
+                src="{% static 'img/wapp.jpg' %}" style="height:40px;" data-selector="img"></a></td>
+                <div style="height:900px ; width: 100%;">
+                    <embed src="{% static 'recibo_pronto.pdf' %}" type="application/pdf" width="100%" height="100%">
+                </div>
+    </div>
+
+
+</html>
+
+{% endblock %}

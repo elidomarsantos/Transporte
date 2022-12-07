@@ -48,7 +48,7 @@
            <td>{{ a.quitado|default_if_none:"&nbsp;" }}</td>
            <td><a href="/editar_lista/{{a.id}}"><i class="material-icons" data-md-tooltip="Editar">edit</i></a></td>
            <td><a href="/deletar_usuario/{{a.id}}"><i class="material-icons" style=color:crimson data-md-tooltip="Apagar">delete</i></a></td>
-           <td><a href="/deletar_fc/{{a.id}}"><i class="material-icons" style=color:blue data-md-tooltip="Recibo">note</i></a></td>
+           <td><a href="/recibo/{{a.id}}"><i class="material-icons" style=color:blue data-md-tooltip="Recibo">note</i></a></td>
            
         </tr>
         {% endfor %} 

@@ -9,6 +9,7 @@ urlpatterns = [
     path('lista_usuario/', views.lista_usuario),
     path('editar_lista/<int:id>', views.editar_lista),
     path('deletar_usuario/<int:id>', views.deletar_usuario),
+    path('recibo/<int:id>', views.recibo),
     path('organizar/', views.organizar),
     path('gerais/', views.gerais),
     path('deletar_gerais/', views.deletar_gerais),

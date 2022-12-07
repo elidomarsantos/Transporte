@@ -6,6 +6,7 @@ from .forms import Form_Usuarios, Form_Gerais
 from django.contrib.auth.decorators import login_required
 from .models import Usuarios, Gerais
 from django.contrib import messages
+from fillpdf import fillpdfs
 
 def gerais(request):
     gerais = Gerais.objects.all()
@@ -81,7 +82,48 @@ def add_usuario(request):
 def lista_usuario(request):
     lista = Usuarios.objects.all()
     quantidade = Usuarios.objects.all().count()
+    
+   
     return render(request, 'templates/lista_usuario.html', {'lista': lista, 'quantidade': quantidade})
+  
+def recibo(request, id):
+    gerais = get_object_or_404(Gerais)
+    usuarios = get_object_or_404(Usuarios, pk=id) 
+    formgerais = Form_Gerais(instance=gerais)
+    formusuarios = Form_Usuarios(instance=usuarios)
+    
+    
+    congregacao = formgerais['congregação'].value()
+    valor_da_passagem = formgerais['valor_da_passagem'].value()
+    nome = formusuarios['nome'].value()
+    evento = formgerais['evento'].value() 
+    data_do_evento1 = formgerais['data_do_evento'].value()
+    data_do_evento = data_do_evento1.strftime("%d-%m-%Y")
+    cidade = formgerais['cidade'].value()    
+    dia = formusuarios['dia'].value().strftime("%d-%m-%Y")
+    coordenador = formgerais['coordenador'].value()
+    assistente = formgerais['assistente'].value()
+    telefone = formusuarios['telefone'].value()
+    
+    
+
+ 
+    data_dict = {
+                "congregacao":congregacao,
+                "valor_da_passagem": valor_da_passagem,
+                "nome": nome,
+                "evento": evento,
+                'data_do_evento':data_do_evento,
+                'cidade': cidade,
+                'dia': dia,
+                'coordenador':coordenador,
+                'assistente': assistente,
+                
+            }
+                
+    fillpdfs.write_fillable_pdf('static/recibo.pdf', 'static/recibo_pronto.pdf', data_dict)
+    
+    return render(request, 'templates/recibo.html', {'formgerais':formgerais ,'formusuarios': formusuarios, 'gerais': gerais, 'usuarios': usuarios, 'telefone': telefone})  
    
 def editar_lista(request, id):
     editar = get_object_or_404(Usuarios, pk=id)
