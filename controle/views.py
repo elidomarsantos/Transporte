@@ -7,6 +7,10 @@ from django.contrib.auth.decorators import login_required
 from .models import Usuarios, Gerais
 from django.contrib import messages
 from fillpdf import fillpdfs
+import pywhatkit
+from pdf2image import convert_from_path
+import win32clipboard
+import glob, sys, fitz
 
 def gerais(request):
     gerais = Gerais.objects.all()
@@ -122,6 +126,15 @@ def recibo(request, id):
             }
                 
     fillpdfs.write_fillable_pdf('static/recibo.pdf', 'static/recibo_pronto.pdf', data_dict)
+    
+    pages = convert_from_path('static/recibo_pronto.pdf', 500)
+    for page in pages:
+        page.save('static/recibo.png', 'PNG')
+    
+            
+    if request.method == 'POST':
+        pywhatkit.sendwhats_image("+55" + telefone, "static/recibo.png")
+        
     
     return render(request, 'templates/recibo.html', {'formgerais':formgerais ,'formusuarios': formusuarios, 'gerais': gerais, 'usuarios': usuarios, 'telefone': telefone})  
    

@@ -1,0 +1,36 @@
+Date: 7/12/2022
+Time: 14:46
+Phone Number: +55 71987495677
+Image: static/img/logo.png
+Caption: 
+--------------------
+Date: 7/12/2022
+Time: 14:47
+Phone Number: +55 71987495677
+Image: static/img/logo.png
+Caption: 
+--------------------
+Date: 7/12/2022
+Time: 14:50
+Phone Number: +5571988779681
+Image: static/img/logo.png
+Caption: 
+--------------------
+Date: 7/12/2022
+Time: 14:51
+Phone Number: +5571988779681
+Image: static/img/logo.png
+Caption: 
+--------------------
+Date: 7/12/2022
+Time: 15:24
+Phone Number: +55071987495677
+Image: static/img/logo.png
+Caption: 
+--------------------
+Date: 7/12/2022
+Time: 15:54
+Phone Number: +55071987495677
+Image: static/recibo.png
+Caption: 
+--------------------

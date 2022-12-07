@@ -4,18 +4,25 @@
 {% block content %}
 {% load static %}
 <br>
-    <div class="offset-1 col-10 list-div">
+<div class="row">
+    <div class="col-sm-12"> 
+      <div class="card">
+             <div class="card-body"> 
        
         <br>
-        
+        <form method="post">
+            {% csrf_token %}
+            <input type="submit" class="btn btn-success" value="Enviar por Whatsapp" src="{% static 'img/wapp.jpg' %}" style="height:40px;" >
             <a href="/lista_usuario" class="btn btn-danger" role="button" aria-pressed="true">Voltar</a>
+        </form>      
            
-            <td><a href="https://api.whatsapp.com/send?l=pt&amp;phone=55{{ telefone }}"><img 
-                src="{% static 'img/wapp.jpg' %}" style="height:40px;" data-selector="img"></a></td>
                 <div style="height:900px ; width: 100%;">
-                    <embed src="{% static 'recibo_pronto.pdf' %}" type="application/pdf" width="100%" height="100%">
+                    <embed src="{% static 'recibo.png' %}" width="55%" height="60%">
                 </div>
     </div>
+</div>
+</div>
+</div>
 
 
 </html>
