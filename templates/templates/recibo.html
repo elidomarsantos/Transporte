@@ -12,13 +12,11 @@
         <br>
         <form method="post">
             {% csrf_token %}
-            
+            <a href="{% static 'recibo_pronto.pdf' %}"class="btn btn-success" download="Recibo">Download do Recibo</a>
             <a href="/lista_usuario" class="btn btn-danger" role="button" aria-pressed="true">Voltar</a>
         </form>      
            
-        <div style="height:900px ; width: 100%;">
-            <embed src="{% static 'recibo_pronto.pdf' %}" type="application/pdf" width="100%" height="100%">
-        </div>
+        
     </div>
 </div>
 </div>
