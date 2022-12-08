@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Usuarios, Gerais
 from django.contrib import messages
 from fillpdf import fillpdfs
+import pandas as pd
 
 
 
@@ -162,6 +163,12 @@ def deletar_usuario(request, id):
 
 def organizar(request):
     organizar = Usuarios.objects.order_by('poltrona').all()
+    imprimir = Usuarios.objects.all().values()
+    
+    df = pd.DataFrame(imprimir)
+    df.to_excel("static/Lista de Usuários.xlsx", header=False, index=False)
+    
+    
     return render(request, 'templates/organizar.html', {'organizar': organizar, })   
 
 def editar_poltrona(request,id):
