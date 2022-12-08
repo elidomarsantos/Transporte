@@ -166,7 +166,7 @@ def organizar(request):
     imprimir = Usuarios.objects.all().values()
     
     df = pd.DataFrame(imprimir)
-    df.to_excel("static/Lista de Usuários.xlsx", header=False, index=False)
+    df.to_excel("static/Usuarios.xlsx", header=False, index=False)
     
     
     return render(request, 'templates/organizar.html', {'organizar': organizar, })   
