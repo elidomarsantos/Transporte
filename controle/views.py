@@ -129,7 +129,7 @@ def recibo(request, id):
 
         
     
-    return render(request, 'templates/recibo.html', {'formgerais':formgerais ,'formusuarios': formusuarios, 'gerais': gerais, 'usuarios': usuarios, 'telefone': telefone})  
+    return render(request, 'templates/recibo.html', {'formgerais':formgerais ,'formusuarios': formusuarios, 'gerais': gerais, 'usuarios': usuarios, })  
    
 def editar_lista(request, id):
     editar = get_object_or_404(Usuarios, pk=id)
@@ -180,4 +180,35 @@ def editar_poltrona(request,id):
 
             return render(request, 'templates/editar_poltrona.html',{'form':form ,'editar_gerais': editar})   
     
-    return render(request, 'templates/editar_poltrona.html', {'form':form ,'editar_gerais': editar})   
+    return render(request, 'templates/editar_poltrona.html', {'form':form ,'editar_gerais': editar})
+
+def poltrona(request, id):
+    gerais = get_object_or_404(Gerais)
+    usuarios = get_object_or_404(Usuarios, pk=id) 
+    formgerais = Form_Gerais(instance=gerais)
+    formusuarios = Form_Usuarios(instance=usuarios)
+    
+    
+    
+    nome = formusuarios['nome'].value()
+    evento = formgerais['evento'].value() 
+    data_do_evento1 = formgerais['data_do_evento'].value()
+    data_do_evento = data_do_evento1.strftime("%d-%m-%Y")
+    poltrona = formusuarios['poltrona'].value()
+    
+    
+
+ 
+    data_dict = {
+                
+                "nome": nome,
+                "evento": evento,
+                'data_do_evento':data_do_evento,
+                'poltrona': poltrona,
+                
+            }
+                
+    fillpdfs.write_fillable_pdf('static/passagem.pdf', 'static/passagem_pronta.pdf', data_dict)
+    
+
+    return render(request, 'templates/poltrona.html', {'formgerais':formgerais ,'formusuarios': formusuarios, 'gerais': gerais, 'usuarios': usuarios, })     

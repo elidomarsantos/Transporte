@@ -16,6 +16,7 @@ urlpatterns = [
     path('add_gerais/', views.add_gerais),
     path('editar_gerais/<int:id>', views.editar_gerais),
     path('editar_poltrona/<int:id>', views.editar_poltrona),
+    path('poltrona/<int:id>', views.poltrona),
    
 
 ]

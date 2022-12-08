@@ -12,7 +12,7 @@
         <br>
         <form method="post">
             {% csrf_token %}
-            <a href="{% static 'recibo_pronto.pdf' %}"class="btn btn-success" download="Recibo">Download do Recibo</a>
+            <a href="{% static 'passagem_pronta.pdf' %}"class="btn btn-success" download="Passagem">Download da Passagem</a>
             <a href="/lista_usuario" class="btn btn-danger" role="button" aria-pressed="true">Voltar</a>
            
         </form>      
