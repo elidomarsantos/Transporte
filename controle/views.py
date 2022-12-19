@@ -84,7 +84,7 @@ def add_usuario(request):
     return render(request, 'templates/add_usuario.html', {'usuario': usuario,})   
 
 def lista_usuario(request):
-    lista = Usuarios.objects.all()
+    lista = Usuarios.objects.order_by('nome').all()
     quantidade = Usuarios.objects.all().count()
     
    

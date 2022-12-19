@@ -17,8 +17,9 @@
              <thead class="thead-light">
               <tr>
                 <th>Nome</th>
+                <th>Carro</th>
                 <th>Poltrona</th>
-                <th>Editar Poltrona</th>
+                <th>Editar Carro/Poltrona</th>
                 <th>Emitir Passagem</th>
                </thead>
                 
@@ -26,6 +27,7 @@
                {% for a in organizar %} 
               <tr>
                 <td>{{ a.nome|default_if_none:"&nbsp;" }}</td>
+                <td>{{ a.carro|default_if_none:"&nbsp;" }}</td>
                 <td>{{ a.poltrona|default_if_none:"&nbsp;" }}</td>
                 
                 <td><a href="/editar_poltrona/{{a.id}}"><i class="material-icons" data-md-tooltip="Editar">edit</i></a></td>

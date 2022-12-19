@@ -12,6 +12,14 @@ EVENTO = (
  
 )
 
+CARRO = (
+    ('01', '01'),
+    ('02', '02'),
+    ('Outra Congregação', 'Outra Congregação'),
+    
+ 
+)
+
 
 
 
@@ -25,6 +33,7 @@ class Usuarios(models.Model):
     observações = models.CharField(max_length=200, blank=True, null=True)
     quitado =  models.CharField(max_length=30, blank=True, null=True, choices=QUITADO)
     poltrona =  models.CharField(max_length=60, blank=True, null=True)
+    carro =  models.CharField(max_length=60, blank=True, null=True, choices=CARRO)
     
  
     
