@@ -19,7 +19,7 @@ class Usuarios(models.Model):
     
     dia = models.DateField(blank=True, null=True)
     nome = models.CharField(max_length=60, blank=True, null=True)
-    identidade = models.IntegerField(blank=True, null=True)
+    identidade = models.BigIntegerField(blank=True, null=True)
     telefone = models.CharField(max_length=12, blank=True, null=True)
     valor = models.DecimalField(blank=True, null=True, max_digits = 10, decimal_places = 2)
     observações = models.CharField(max_length=200, blank=True, null=True)
