@@ -202,6 +202,7 @@ def poltrona(request, id):
     data_do_evento1 = formgerais['data_do_evento'].value()
     data_do_evento = data_do_evento1.strftime("%d-%m-%Y")
     poltrona = formusuarios['poltrona'].value()
+    carro = formusuarios['carro'].value()
     
     
 
@@ -212,6 +213,7 @@ def poltrona(request, id):
                 "evento": evento,
                 'data_do_evento':data_do_evento,
                 'poltrona': poltrona,
+                'carro': carro,
                 
             }
                 
