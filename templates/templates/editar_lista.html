@@ -35,11 +35,28 @@
            <div class="form-group col-md-3">
             {{ form.quitado|as_crispy_field }}
         </div> 
+        <div id="sumir">    
+            {{ form.nome|as_crispy_field }}
+            {{ form.carro|as_crispy_field }}
+            {{ form.poltrona|as_crispy_field }}
+            
+    </div> 
+       
            
            </div>  
            <input type="submit" class="btn btn-success" value="Salvar">
            <a href="/lista_usuario" class="btn btn-primary" role="button" aria-pressed="true">Voltar</a>
     </form>
     </div>
+    <div id="sumir">    
+                {{ form.dia|as_crispy_field }}
+                {{ form.nome|as_crispy_field }}
+                {{ form.identidade|as_crispy_field }}
+                {{ form.telefone|as_crispy_field }}
+                {{ form.valor|as_crispy_field }}
+                {{ form.observações|as_crispy_field }}
+                {{ form.quitado|as_crispy_field }}
+        </div> 
+           
 
 {% endblock %}
