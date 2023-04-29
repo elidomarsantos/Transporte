@@ -28,8 +28,6 @@ class Usuarios(models.Model):
     observações = models.CharField(max_length=200, blank=True, null=True)
 
     
-class Meta:
-    ordering = ['poltrona']    
 
 class Gerais_Assembleia(models.Model):   
     congregação = models.CharField(max_length=60, blank=True, null=True)

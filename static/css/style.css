@@ -148,12 +148,14 @@ form {
   padding: 20px;
   background-color:bisque;
   text-align: center;
+  border-bottom: #ee121d;
   
 }
 
 #cardlocal  a {
   font-size: 20px;
-  color: blue;
+  color: #ee121d;
+  font-family: 'Roboto Condensed', sans-serif;
  
   font-weight: bold;
  }
@@ -169,8 +171,61 @@ form {
 }
 
 
-#sumir {
-  display: none;
+#cardlocal2  {
+
+  border-radius: 30px;
+  height: 200px;
+  padding: 20px;
+  background-color:rgb(200, 238, 192);
+  text-align: center;
+  
 }
+
+#cardlocal2  a {
+  font-size: 20px;
+  color: #ee121d;
+  font-family: 'Roboto Condensed', sans-serif;
+ 
+  font-weight: bold;
+ }
+
+ #cardlocal2  h3, h5 {
+  font-weight: bold;
+  color: hsl(256, 100%, 50%);
+ } 
+
+#cardlocal2  a:hover{
+  color: hsl(355, 98%, 52%);
+   
+}
+
+#cardlocal3  {
+
+  border-radius: 30px;
+  height: 200px;
+  padding: 20px;
+  background-color:#c7c2f3;
+  text-align: center;
+  
+}
+
+#cardlocal3  a {
+  font-size: 20px;
+  color: #ee121d;
+  font-family: 'Roboto Condensed', sans-serif;
+ 
+  font-weight: bold;
+ }
+
+ #cardlocal3  h3, h5 {
+  font-weight: bold;
+  color: hsl(256, 100%, 50%);
+ } 
+
+#cardlocal3  a:hover{
+  color: hsl(355, 98%, 52%);
+   
+}
+
 
 

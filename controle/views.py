@@ -35,13 +35,14 @@ def add_usuario(request):
           
             usuario = Form_Usuarios()
  
-            messages.info(request, 'Inserido com sucesso')
-            return redirect('/add_usuario')
+        
+            return redirect('/lista_usuario')
        
     else:
         usuario = Form_Usuarios()
     
-    return render(request, 'templates/add_usuario.html', {'usuario': usuario,})   
+    return render(request, 'templates/add_usuario.html', {'usuario': usuario,}) 
+
 def lista_usuario(request):
     lista = Usuarios.objects.order_by('nome').all()
     quantidade = Usuarios.objects.all().count()
@@ -73,7 +74,7 @@ def deletar_usuario(request, id):
     if request.method == 'POST':
         deletar.delete()
 
-        messages.info(request, 'Apagado com sucesso')
+   
         return redirect('/lista_usuario')
 
     return render(request, 'templates/deletar_usuario.html')
@@ -135,10 +136,9 @@ def organizar_assembleia(request):
     
     df = pd.DataFrame(imprimir)
     df.to_excel("static/Usuarios.xlsx", header=True, index=False)
-    print(organizar)
+    
   
-    return render(request, 'templates/organizar_assembleia.html', {'quantidade': quantidade,'organizar': organizar})   
-
+    return render(request, 'templates/organizar_assembleia.html', {'quantidade': quantidade,'organizar': organizar})     
 def editar_lista_assembleia(request, id):
     editar = get_object_or_404(Usuarios_Assembleia, pk=id)
     form = Form_Usuarios_Assembleia(instance=editar)
@@ -148,7 +148,7 @@ def editar_lista_assembleia(request, id):
          
         if form.is_valid():
             editar.save()
-            messages.info(request, 'Editado com sucesso')
+          
             return redirect('/organizar_assembleia')
    
         else:
@@ -270,4 +270,6 @@ def recibo_assembleia(request, id):
 
         
     
-    return render(request, 'templates/recibo_assembleia.html', {'formgerais':formgerais ,'formusuarios': formusuarios, 'gerais': gerais, 'usuarios': usuarios, })    
+    return render(request, 'templates/recibo_assembleia.html', {'formgerais':formgerais ,'formusuarios': formusuarios, 'gerais': gerais, 'usuarios': usuarios, }) 
+
+    

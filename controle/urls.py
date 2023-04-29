@@ -19,6 +19,8 @@ urlpatterns = [
     path('editar_lista_assembleia/<int:id>', views.editar_lista_assembleia),
     path('deletar_usuario_assembleia/<int:id>', views.deletar_usuario_assembleia),
     path('poltrona_assembleia/<int:id>', views.poltrona_assembleia),
+    
+    
    
 
 ]
