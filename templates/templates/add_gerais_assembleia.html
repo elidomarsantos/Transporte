@@ -5,7 +5,7 @@
 
 
 <div class="container">
- <span id='span_h3'><h3>Informações Gerais para Fechamento Mensal</h3></span>
+ <span id='span_h3'><h3>Informações Gerais para Organização de Assembleia</h3></span>
   <br>
   <br>
   
@@ -24,22 +24,15 @@
             <div class="form-group col-md-3">
                 {{ gerais.estado|as_crispy_field }}
             </div>    
-        </div>  
-        <div class="form-row"> 
-            <div class="form-group col-md-3">
-                {{ gerais.evento|as_crispy_field }}
-            </div>   
-            <div class="form-group col-md-3">
+             <div class="form-group col-md-3">
                 {{ gerais.data_do_evento|as_crispy_field }}
-            </div>    
+            </div>   
+        </div>  
+        <div class="form-row">    
             <div class="form-group col-md-3">
                 {{ gerais.valor_da_passagem|as_crispy_field }}
             </div> 
-          
-            <div class="form-group col-md-3">
-                {{ gerais.quantidade_de_ônibus|as_crispy_field }}
-            </div>  
-            <div class="form-group col-md-3">
+             <div class="form-group col-md-3">
                 {{ gerais.coordenador|as_crispy_field }}
             </div>  
             <div class="form-group col-md-3">

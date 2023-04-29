@@ -92,9 +92,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': 'K7SWubV5I5Wb9dK9mQYw',
-        'HOST': 'containers-us-west-151.railway.app',
-        'PORT': '6521',
+        'PASSWORD': 'mUtSXqCDcIyAfd2yuVCd',
+        'HOST': 'containers-us-west-185.railway.app',
+        'PORT': '7685',
     }
 }
 
@@ -145,7 +145,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL = '/gerais'
+LOGIN_REDIRECT_URL = '/inicial'
 
 LOGOUT_REDIRECT_URL = '/autenticacao/login'
 

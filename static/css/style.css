@@ -141,4 +141,36 @@ form {
   display: none;
 }
 
+#cardlocal  {
+
+  border-radius: 30px;
+  height: 200px;
+  padding: 20px;
+  background-color:bisque;
+  text-align: center;
+  
+}
+
+#cardlocal  a {
+  font-size: 20px;
+  color: blue;
+ 
+  font-weight: bold;
+ }
+
+ #cardlocal  h3, h5 {
+  font-weight: bold;
+  color: hsl(256, 100%, 50%);
+ } 
+
+#cardlocal  a:hover{
+  color: hsl(355, 98%, 52%);
+   
+}
+
+
+#sumir {
+  display: none;
+}
+
 

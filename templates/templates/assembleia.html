@@ -4,21 +4,21 @@
 {% block content %}
 
 <div class="container">
-<h3 style="text-align:center;">Informações Gerais</h3>
+<h3 style="text-align:center;">Assembleia - Informações Gerais</h3>
 <br>
 <div class="row">
 <div class="col-sm-12"> 
-  <div class="card">
-         <div class="card-body"> 
+
          
             {% if gerais %}
-                <a id="registro_b" href="/deletar_gerais" class="btn btn-danger">Limpar</a>
+                <a id="registro_b" href="/deletar_gerais_assembleia" class="btn btn-danger">Limpar</a>
              {% else %}  
-               <a id="registro_b" href="/add_gerais" class="btn btn-success">Inserir</a>
+               <a id="registro_b" href="/add_gerais_assembleia" class="btn btn-success">Inserir</a>
               {% endif %}  
               {% for a in gerais %} 
-             <a id="registro_b"href="/editar_gerais/{{a.id}}" class="btn btn-warning">Editar</a>
+             <a id="registro_b"href="/editar_gerais_assembleia/{{a.id}}" class="btn btn-warning">Editar</a>
               {% endfor %} 
+              <a id="registro_b"href="/organizar_assembleia/{{a.id}}" class="btn btn-primary">Organização do Arranjo</a>
  
                </div> 
              
@@ -29,12 +29,13 @@
            {%  endfor %} 
           </ul>
           {% endif %}
-      </div> 
-      </div> 
+
  </div>   
   <br> 
   <div class="row">
  <div class="col-md-6"> 
+   <div class="card">
+      <div class="card-body" >
     <table id='tabela_gerais'>
       <tbody>
         <thead class="thead-light">
@@ -56,30 +57,30 @@
            {% endfor %} 
         </tr>
         <tr>
-         <th>Evento</th>
+         <th>Data do Evento</th>
          {% for a in gerais %} 
-         <td>{{ a.evento|default_if_none:"&nbsp;" }}</td>
+         <td>{{ a.data_do_evento|date:'d/m/Y' }}</td>
          {% endfor %} 
       </tr>
-           <tr>
-           <th>Data do Evento</th>
-           {% for a in gerais %} 
-           <td>{{ a.data_do_evento|date:'d/m/Y' }}</td>
-           {% endfor %} 
-        </tr>
+   </tbody>
+</table>
+   </div>
+ </div>
+</div>
+
+<div class="col-sm-6">
+ <div class="card">
+   <div class="card-body" >
+      <table id='tabela_gerais'>
+         <tbody>
+           
            <tr>
            <th>Valor da Passagem</th>
            {% for a in gerais %} 
            <td>{{ a.valor_da_passagem|default_if_none:"&nbsp;" }}</td>
            {% endfor %} 
         </tr>
-           <tr>
-           <th>Quantidade de Ônibus</th>
-           {% for a in gerais %} 
-           <td>{{ a.quantidade_de_ônibus|default_if_none:"&nbsp;"  }}</td>
-           {% endfor %} 
-           <tr>
-            <th>Coordenador</th>
+             <th>Coordenador</th>
             {% for a in gerais %} 
             <td>{{ a.coordenador|default_if_none:"&nbsp;"  }}</td>
             {% endfor %} 
