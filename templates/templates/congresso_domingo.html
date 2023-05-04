@@ -4,9 +4,8 @@
 {% block content %}
 
 <div class="container">
-   
-   <h3 style='color:red' style="text-align:center;"><b>Assembleia - Informações Gerais</b></h3>
- 
+   <h3 style='color:orange' style="text-align:center;"><b>Congresso - Domingo - Informações Gerais</b></h3>
+
 <br>
 <br>
 <div class="row">
@@ -14,14 +13,14 @@
 
          
             {% if gerais %}
-                <a id="registro_b" href="/deletar_gerais_assembleia" class="btn btn-danger">Limpar</a>
+                <a id="registro_b" href="/deletar_gerais_congresso_domingo" class="btn btn-danger">Limpar</a>
              {% else %}  
-               <a id="registro_b" href="/add_gerais_assembleia" class="btn btn-success">Inserir</a>
+               <a id="registro_b" href="/add_gerais_congresso_domingo" class="btn btn-success">Inserir</a>
               {% endif %}  
               {% for a in gerais %} 
-             <a id="registro_b"href="/editar_gerais_assembleia/{{a.id}}" class="btn btn-warning">Editar</a>
+             <a id="registro_b"href="/editar_gerais_congresso_domingo/{{a.id}}" class="btn btn-warning">Editar</a>
               {% endfor %} 
-              <a id="registro_b"href="/organizar_assembleia/{{a.id}}" class="btn btn-primary">Organização do Arranjo</a>
+              <a id="registro_b"href="/organizar_congresso_domingo/{{a.id}}" class="btn btn-primary">Organização do Arranjo</a>
  
                </div> 
              
@@ -39,7 +38,7 @@
  <div class="col-md-6"> 
    <div class="card">
       <div class="card-body" >
-    <table id='tabela_gerais_ass'>
+    <table id='tabela_gerais_dom'>
       <tbody>
         <thead class="thead-light">
            <tr>
@@ -74,7 +73,7 @@
 <div class="col-sm-6">
  <div class="card">
    <div class="card-body" >
-      <table id='tabela_gerais_ass'>
+      <table id='tabela_gerais_dom'>
          <tbody>
            
            <tr>

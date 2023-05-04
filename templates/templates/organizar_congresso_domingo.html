@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+{% load static %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+          <h3 style='color:orange' class="card-title"><b>Organização do Arranjo - Congresso - Domingo</b></h3>
+            </div>
+    <div class="col-sm-4">
+          <h3 class="card-title">Quantidade de Usuários: {{ quantidade.count }}</h3>
+          </div>
+          
+  </div>  
+  <br>
+  <span><a href="{% static 'Usuarios.xlsx' %}" class="btn btn-warning" download="Usuários">Baixar Lista de Usuários</a></span> 
+  <br>
+ <br>
+ <br>
+   <table class="table table-hover table-bordered table-secondary" id='tabela_lista_dom'>
+     <tbody>
+        <thead class="thead-light">
+         <tr>
+          <th width="60%">Nome</th>
+           <th>Editar Usuário</th>
+           <th>Apagar Usuário</th>
+           <th>Solicitou Passagem?</th>
+           <th>Quitado?</th>
+           <th>Carro</th>
+           <th>Poltrona</th>
+           <th>Emitir Recibo</th>
+           <th>Emitir Passagem</th>
+
+
+         </thead>
+           
+          </tr>
+      
+         <tr>
+          
+           
+    
+           {% for a in organizar %}   
+           <td>{{ a.nome |default_if_none:"&nbsp;" }}</td> 
+           <td><a href="/editar_lista_congresso_domingo/{{a.id}}"><i class="material-icons" data-md-tooltip="Editar">edit</i></a></td>
+           <td><a href="/deletar_usuario_congresso_domingo/{{a.id}}"><i class="material-icons" style=color:crimson data-md-tooltip="Apagar">delete</i></a></td>
+           <td>{{ a.adquiriu|default_if_none:"&nbsp;" }}</td>
+           <td>{{ a.quitado|default_if_none:"&nbsp;" }}</td>
+           <td>{{ a.carro|default_if_none:"&nbsp;" }}</td>
+           <td>{{ a.poltrona|default_if_none:"&nbsp;" }}</td>
+           <td><a href="/recibo_congresso_domingo/{{a.id}}"><i class="material-icons" style=color:blue data-md-tooltip="Recibo">note</i></a></td>
+           <td><a href="/poltrona_congresso_domingo/{{a.id}}"><i class="material-icons" style=color:brown data-md-tooltip="Passagem">directions_bus</i></a></td> 
+        </tr>
+        {% endfor %} 
+       </tbody>
+     </table>
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+<div class="container">
+ <span id='span_h3'><h3>Informações Gerais para Organização do Congresso - Sábado</h3></span>
+  <br>
+  <br>
+  
+    <form method="post">
+        <input type="submit" class="btn btn-success" value="Salvar">
+        <br>
+        <br>
+        {% csrf_token %}
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                {{ gerais.congregação|as_crispy_field }}
+            </div>    
+            <div class="form-group col-md-3">
+                {{ gerais.cidade|as_crispy_field }}
+            </div>    
+            <div class="form-group col-md-3">
+                {{ gerais.estado|as_crispy_field }}
+            </div>    
+             <div class="form-group col-md-3">
+                {{ gerais.data_do_evento|as_crispy_field }}
+            </div>   
+        </div>  
+        <div class="form-row">    
+            <div class="form-group col-md-3">
+                {{ gerais.valor_da_passagem|as_crispy_field }}
+            </div> 
+             <div class="form-group col-md-3">
+                {{ gerais.coordenador|as_crispy_field }}
+            </div>  
+            <div class="form-group col-md-3">
+                {{ gerais.assistente|as_crispy_field }}
+            </div>  
+            
+            
+            
+          
+ </form>
+ </div>
+ 
+ {% endblock %}

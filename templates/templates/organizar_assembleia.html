@@ -6,24 +6,25 @@
 <div class="container">
 
     <div class="row">
-      <div class="col-sm-6">
-            <h3 class="card-title">Organização do Arranjo</h3>
-            <span><a href="{% static 'Usuarios.xlsx' %}" class="btn btn-success" download="Usuários">Baixar Lista de Usuários</a></span>
-            
-          </div>
-      <div class="col-sm-6">
-            <h3 class="card-title">Quantidade de Passagens: {{ quantidade.count }}</h3>
+      <div class="col-sm-8">
+            <h3 style='color:red' class="card-title"><b>Organização do Arranjo - Assembleia</b></h3>
+              </div>
+      <div class="col-sm-4">
+            <h3 class="card-title">Quantidade de Usuários: {{ quantidade.count }}</h3>
             </div>
-    </div>   
-
+            
+    </div>  
+    <br>
+    <span><a href="{% static 'Usuarios.xlsx' %}" class="btn btn-danger" download="Usuários">Baixar Lista de Usuários</a></span> 
+    <br>
    <br>
-   
+   <br>
     
-   <table class="table table-hover table-bordered table-secondary" id='tabela_lista'>
+   <table class="table table-hover table-bordered table-secondary" id='tabela_lista_ass'>
      <tbody>
         <thead class="thead-light">
          <tr>
-           <th>Nome</th>
+          <th width="60%">Nome</th>
            <th>Editar Usuário</th>
            <th>Apagar Usuário</th>
            <th>Solicitou Passagem?</th>
@@ -51,7 +52,7 @@
            <td>{{ a.carro|default_if_none:"&nbsp;" }}</td>
            <td>{{ a.poltrona|default_if_none:"&nbsp;" }}</td>
            <td><a href="/recibo_assembleia/{{a.id}}"><i class="material-icons" style=color:blue data-md-tooltip="Recibo">note</i></a></td>
-           <td><a href="/poltrona_assembleia/{{a.id}}"><i class="material-icons" style=color:blue data-md-tooltip="Passagem">note</i></a></td> 
+           <td><a href="/poltrona_assembleia/{{a.id}}"><i class="material-icons" style=color:brown data-md-tooltip="Passagem">directions_bus</i></a></td> 
         </tr>
         {% endfor %} 
        </tbody>

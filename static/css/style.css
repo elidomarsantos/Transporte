@@ -30,12 +30,78 @@
 
 }
 
-#tabela_lista {
+#tabela_lista_ass {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 20px;
   text-align: center;
+  background-color:beige;
   
 }
+
+#tabela_lista_ass th {
+
+  vertical-align: middle;
+  background-color:lightsalmon;
+}
+
+#tabela_lista_user th {
+
+  vertical-align: middle;
+  background-color:lightgray;
+}
+
+#tabela_lista_user {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  background-color:lightgray;
+  
+}
+
+
+#tabela_lista_sex {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  background-color:lightgreen
+  
+}
+
+#tabela_lista_sex th {
+
+  vertical-align: middle;
+  background-color:lightgreen
+}
+
+#tabela_lista_sab {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  background-color:lightblue;
+  
+}
+
+#tabela_lista_sab th {
+
+  vertical-align: middle;
+  background-color:lightblue;
+}
+
+
+#tabela_lista_dom {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  background-color:moccasin;
+  
+}
+
+#tabela_lista_dom th {
+
+  vertical-align: middle;
+  background-color:moccasin;
+}
+
 
 [data-md-tooltip] {
   position: relative;
@@ -84,16 +150,74 @@ form {
   
 }
 
-#tabela_gerais th {
+#tabela_gerais_ass th {
   line-height: 30px;
   text-align: center;
   width: 300px;
+  font-size: 23px;
+  font-family: 'Roboto Condensed', sans-serif;
  }
 
-#tabela_gerais td {
+#tabela_gerais_ass td {
   line-height: 30px;
   text-align: center;
-  background-color: lightgray;
+  background-color: lightsalmon;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 23px;
+  width: 300px;
+ }
+
+ #tabela_gerais_sex th {
+  line-height: 30px;
+  text-align: center;
+  width: 300px;
+  font-size: 23px;
+  font-family: 'Roboto Condensed', sans-serif;
+ }
+
+#tabela_gerais_sex td {
+  line-height: 30px;
+  text-align: center;
+  background-color: lightgreen;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 23px;
+  width: 300px;
+ }
+
+ 
+ #tabela_gerais_sab th {
+  line-height: 30px;
+  text-align: center;
+  width: 300px;
+  font-size: 23px;
+  font-family: 'Roboto Condensed', sans-serif;
+ }
+
+#tabela_gerais_sab td {
+  line-height: 30px;
+  text-align: center;
+  background-color: lightblue;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 23px;
+  width: 300px;
+ }
+
+ 
+ #tabela_gerais_dom th {
+  line-height: 30px;
+  text-align: center;
+  width: 300px;
+  font-size: 23px;
+  font-family: 'Roboto Condensed', sans-serif;
+ }
+
+#tabela_gerais_dom td {
+  line-height: 30px;
+  text-align: center;
+  background-color:moccasin;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 23px;
+  width: 300px;
  }
 
  #modules {
@@ -141,91 +265,154 @@ form {
   display: none;
 }
 
-#cardlocal  {
+#card_user  {
 
   border-radius: 30px;
   height: 200px;
   padding: 20px;
-  background-color:bisque;
+  border: none;
   text-align: center;
-  border-bottom: #ee121d;
+  border-bottom:3px solid black;
   
 }
 
-#cardlocal  a {
-  font-size: 20px;
-  color: #ee121d;
+#card_user  a {
+  font-size: 23px;
+  color: black;
+  font-family: 'Roboto Condensed', sans-serif;
+  
+  font-weight: bold;
+ }
+
+ #card_user  h3, h5 {
+  font-weight: bold;
+  color: gray;
+ } 
+
+#card_user  a:hover{
+  color:gray;
+   
+}
+
+#card_ass  {
+
+  border-radius: 30px;
+  height: 200px;
+  padding: 20px;
+  border: none;
+  text-align: center;
+  border-bottom:3px solid red;
+  
+  
+}
+
+#card_ass a {
+  font-size: 23px;
+  color: red;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+ }
+
+ #card_ass h3, h5 {
+  font-weight: bold;
+  color: hsl(256, 100%, 50%);
+ } 
+
+#card_ass  a:hover{
+  color:gray;
+   
+}
+
+#card_sexta {
+
+  border-radius: 30px;
+  height: 200px;
+  padding: 20px;
+  border: none;
+  text-align: center;
+  border-bottom:3px solid green
+  
+  
+}
+
+#card_sexta  a {
+  font-size: 23px;
+  color: green;
   font-family: 'Roboto Condensed', sans-serif;
  
   font-weight: bold;
  }
 
- #cardlocal  h3, h5 {
+ #card_sexta  h3, h5 {
   font-weight: bold;
   color: hsl(256, 100%, 50%);
  } 
 
-#cardlocal  a:hover{
-  color: hsl(355, 98%, 52%);
+#card_sexta  a:hover{
+  color:gray;
    
 }
 
 
-#cardlocal2  {
+#card_sabado {
 
   border-radius: 30px;
   height: 200px;
   padding: 20px;
-  background-color:rgb(200, 238, 192);
+  border: none;
   text-align: center;
-  
+  border-bottom:3px solid blue;
+ 
 }
 
-#cardlocal2  a {
-  font-size: 20px;
-  color: #ee121d;
+#card_sabado  a {
+  font-size: 23px;
+  color: blue;
   font-family: 'Roboto Condensed', sans-serif;
  
   font-weight: bold;
  }
 
- #cardlocal2  h3, h5 {
+ #card_sabado  h3, h5 {
   font-weight: bold;
   color: hsl(256, 100%, 50%);
  } 
 
-#cardlocal2  a:hover{
-  color: hsl(355, 98%, 52%);
+#card_sabado  a:hover{
+  color:gray;
    
 }
 
-#cardlocal3  {
+
+#card_domingo {
 
   border-radius: 30px;
   height: 200px;
   padding: 20px;
-  background-color:#c7c2f3;
+  border: none;
   text-align: center;
-  
+  border-bottom:3px solid orange;
+ 
 }
 
-#cardlocal3  a {
-  font-size: 20px;
-  color: #ee121d;
+#card_domingo  a {
+  font-size: 23px;
+  color: orange;
   font-family: 'Roboto Condensed', sans-serif;
  
   font-weight: bold;
  }
 
- #cardlocal3  h3, h5 {
+ #card_domingo  h3, h5 {
   font-weight: bold;
   color: hsl(256, 100%, 50%);
  } 
 
-#cardlocal3  a:hover{
-  color: hsl(355, 98%, 52%);
+#card_domingo  a:hover{
+  color:gray;
    
 }
+
 
 
 
