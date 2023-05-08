@@ -30,13 +30,78 @@
 
 }
 
-#tabela_lista {
+#tabela_lista_ass {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 20px;
   text-align: center;
-
-
+  background-color:beige;
+  
 }
+
+#tabela_lista_ass th {
+
+  vertical-align: middle;
+  background-color:lightsalmon;
+}
+
+#tabela_lista_user th {
+
+  vertical-align: middle;
+  background-color:lightgray;
+}
+
+#tabela_lista_user {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  background-color:lightgray;
+  
+}
+
+
+#tabela_lista_sex {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  background-color:lightgreen
+  
+}
+
+#tabela_lista_sex th {
+
+  vertical-align: middle;
+  background-color:lightgreen
+}
+
+#tabela_lista_sab {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  background-color:lightblue;
+  
+}
+
+#tabela_lista_sab th {
+
+  vertical-align: middle;
+  background-color:lightblue;
+}
+
+
+#tabela_lista_dom {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  background-color:moccasin;
+  
+}
+
+#tabela_lista_dom th {
+
+  vertical-align: middle;
+  background-color:moccasin;
+}
+
 
 [data-md-tooltip] {
   position: relative;
@@ -64,13 +129,13 @@
   transform: translateX(-50%) scale(1); 
 }
 
-h3 {
+h3, h4 {
   font-size: 30px;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
 h4 {
-  font-size: 30px;
+  font-size: 20px;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -85,16 +150,74 @@ form {
   
 }
 
-#tabela_gerais th {
+#tabela_gerais_ass th {
   line-height: 30px;
   text-align: center;
   width: 300px;
+  font-size: 23px;
+  font-family: 'Roboto Condensed', sans-serif;
  }
 
-#tabela_gerais td {
+#tabela_gerais_ass td {
   line-height: 30px;
   text-align: center;
-  background-color: lightgray;
+  background-color: lightsalmon;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 23px;
+  width: 300px;
+ }
+
+ #tabela_gerais_sex th {
+  line-height: 30px;
+  text-align: center;
+  width: 300px;
+  font-size: 23px;
+  font-family: 'Roboto Condensed', sans-serif;
+ }
+
+#tabela_gerais_sex td {
+  line-height: 30px;
+  text-align: center;
+  background-color: lightgreen;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 23px;
+  width: 300px;
+ }
+
+ 
+ #tabela_gerais_sab th {
+  line-height: 30px;
+  text-align: center;
+  width: 300px;
+  font-size: 23px;
+  font-family: 'Roboto Condensed', sans-serif;
+ }
+
+#tabela_gerais_sab td {
+  line-height: 30px;
+  text-align: center;
+  background-color: lightblue;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 23px;
+  width: 300px;
+ }
+
+ 
+ #tabela_gerais_dom th {
+  line-height: 30px;
+  text-align: center;
+  width: 300px;
+  font-size: 23px;
+  font-family: 'Roboto Condensed', sans-serif;
+ }
+
+#tabela_gerais_dom td {
+  line-height: 30px;
+  text-align: center;
+  background-color:moccasin;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 23px;
+  width: 300px;
  }
 
  #modules {
@@ -137,3 +260,159 @@ form {
   top: 4px;
   right: 4px;
 }
+
+#sumir {
+  display: none;
+}
+
+#card_user  {
+
+  border-radius: 30px;
+  height: 200px;
+  padding: 20px;
+  border: none;
+  text-align: center;
+  border-bottom:3px solid black;
+  
+}
+
+#card_user  a {
+  font-size: 23px;
+  color: black;
+  font-family: 'Roboto Condensed', sans-serif;
+  
+  font-weight: bold;
+ }
+
+ #card_user  h3, h5 {
+  font-weight: bold;
+  color: gray;
+ } 
+
+#card_user  a:hover{
+  color:gray;
+   
+}
+
+#card_ass  {
+
+  border-radius: 30px;
+  height: 200px;
+  padding: 20px;
+  border: none;
+  text-align: center;
+  border-bottom:3px solid red;
+  
+  
+}
+
+#card_ass a {
+  font-size: 23px;
+  color: red;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+ }
+
+ #card_ass h3, h5 {
+  font-weight: bold;
+  color: hsl(256, 100%, 50%);
+ } 
+
+#card_ass  a:hover{
+  color:gray;
+   
+}
+
+#card_sexta {
+
+  border-radius: 30px;
+  height: 200px;
+  padding: 20px;
+  border: none;
+  text-align: center;
+  border-bottom:3px solid green
+  
+  
+}
+
+#card_sexta  a {
+  font-size: 23px;
+  color: green;
+  font-family: 'Roboto Condensed', sans-serif;
+ 
+  font-weight: bold;
+ }
+
+ #card_sexta  h3, h5 {
+  font-weight: bold;
+  color: hsl(256, 100%, 50%);
+ } 
+
+#card_sexta  a:hover{
+  color:gray;
+   
+}
+
+
+#card_sabado {
+
+  border-radius: 30px;
+  height: 200px;
+  padding: 20px;
+  border: none;
+  text-align: center;
+  border-bottom:3px solid blue;
+ 
+}
+
+#card_sabado  a {
+  font-size: 23px;
+  color: blue;
+  font-family: 'Roboto Condensed', sans-serif;
+ 
+  font-weight: bold;
+ }
+
+ #card_sabado  h3, h5 {
+  font-weight: bold;
+  color: hsl(256, 100%, 50%);
+ } 
+
+#card_sabado  a:hover{
+  color:gray;
+   
+}
+
+
+#card_domingo {
+
+  border-radius: 30px;
+  height: 200px;
+  padding: 20px;
+  border: none;
+  text-align: center;
+  border-bottom:3px solid orange;
+ 
+}
+
+#card_domingo  a {
+  font-size: 23px;
+  color: orange;
+  font-family: 'Roboto Condensed', sans-serif;
+ 
+  font-weight: bold;
+ }
+
+ #card_domingo  h3, h5 {
+  font-weight: bold;
+  color: hsl(256, 100%, 50%);
+ } 
+
+#card_domingo  a:hover{
+  color:gray;
+   
+}
+
+
+
+
